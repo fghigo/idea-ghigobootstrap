@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(12, 12, 12);
+    color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.navbarfo ul{
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    margin-right: 1rem;
+    }
+.navbarfo ul li a {
+    color: black;
+    text-decoration:none ;
+    font-size: 1.2rem;
+}
+.navbarfo ul li a:hover{
+    color:#e7500a;
+}
+main img{ max-width: 100%;
+}
+
+aside img{ max-width: 100%;
+margin:inherit;}
+
+.widget form{ margin-left: 15px;}
+   
+.footer{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.contenedor {
+    width: 90% ;
+    max-width: 1000px ;
+    margin: 20px auto ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header header" 
+    "contenido contenido contenido"
+    "widget widget sidebar"
+    "footer footer footer"
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .widget,
+.contenedor .footer {
+    padding: 20px;
+}
+.contenedor .header {
+    max-width: 100%;    
+    grid-area: header;   
+}
+.contenedor .contenido{
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    grid-area: contenido;
+}
+.contenedor .sidebar{
+    background-color: #e7500a;
+    display:grid;
+    align-items: center;
+    justify-content:center;
+    grid-area: sidebar;
+    min-height: 100px;    
+}
+.contenedor .widget{ 
+    background-color:#e7500a ;
+    grid-area: widget;
+}
+.contenedor .footer {
+    background-color: whitesmoke;
+    grid-area: footer;
+}
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: 
+        "header header header" 
+        "contenido contenido contenido"
+        "widget widget sidebar"
+        "footer footer footer"
+    }
+}
+    @media screen and (max-width: 425px){
+        .contenedor{
+            grid-template-areas: 
+            "header" 
+            "sidebar"
+            "contenido"
+            "widget"
+            "footer"
+            }      
+}
