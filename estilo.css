@@ -17,7 +17,7 @@ body{
     margin-right: 1rem;
     }
 .navbarfo ul li a {
-    color: beige;
+    color: black;
     text-decoration:none ;
     font-size: 1.2rem;
 }
@@ -84,7 +84,7 @@ margin:inherit;}
     grid-area: widget;
 }
 .contenedor .footer {
-    background-color: #0a0347;
+    background-color: whitesmoke;
     grid-area: footer;
 }
 @media screen and (max-width: 768px){
